@@ -9,12 +9,12 @@ on R scripts that are run sequentially.
 They structure the stock assessment
 
 3
-00:00:10,170 --> 00:00:15,839
+00:00:10,170 --> 00:00:15,840
 into separate steps, and what we'll end up
 with is clean organized and reproducible
 
 4
-00:00:15,839 --> 00:00:20,640
+00:00:15,840 --> 00:00:20,640
 assessments. The aim of TAF is to
 implement a framework to organize data,
 
@@ -34,12 +34,12 @@ and the different components, it's about
 going from data to analysis and results.
 
 8
-00:00:36,270 --> 00:00:42,149
+00:00:36,270 --> 00:00:42,150
 We start with getting data from ICES
 databases and other data sources.
 
 9
-00:00:42,149 --> 00:00:47,640
+00:00:42,150 --> 00:00:47,640
 The first step in the data folder is
 to gather the data, and to filter and
 
@@ -84,12 +84,12 @@ model will read. The model folder is
 about running the model. The model
 
 18
-00:01:26,640 --> 00:01:31,799
+00:01:26,640 --> 00:01:31,800
 will be coming from either a toolbox of
 commonly used models, or any model can be
 
 19
-00:01:31,799 --> 00:01:38,340
+00:01:31,800 --> 00:01:38,340
 used within this folder. The final
 step, output, is where we convert the
 
@@ -109,12 +109,12 @@ upload those results into the ICES
 databases: the stock assessment graphs,
 
 23
-00:01:54,420 --> 00:01:59,729
+00:01:54,420 --> 00:01:59,730
 tables and so forth. Behind each of
 those folders, data, input, model, and
 
 24
-00:01:59,729 --> 00:02:05,670
+00:01:59,730 --> 00:02:05,670
 output, there is an R script that governs
 what takes place. Let's take a look at
 
@@ -144,7 +144,7 @@ format, writing out the model input files.
 In model.R we run the analysis, often
 
 30
-00:02:31,069 --> 00:02:36,650
+00:02:31,060 --> 00:02:36,650
 just invoking a shell command or
 an R package to run the model and
 
@@ -224,32 +224,32 @@ have comments reminding us what is the
 purpose of the script: to preprocess
 
 46
-00:03:53,000 --> 00:03:59,329
+00:03:53,000 --> 00:03:59,330
 the data and to write out the TAF data
 tables. In the comment we also write the
 
 47
-00:03:59,329 --> 00:04:05,420
+00:03:59,330 --> 00:04:05,420
 state before the script is run and after
 the script is run, in terms of the files
 
 48
-00:04:05,420 --> 00:04:12,019
+00:04:05,420 --> 00:04:12,020
 and where they are. So we start with
 catch.csv and surveys_all.csv in the
 
 49
-00:04:12,019 --> 00:04:18,169
+00:04:12,020 --> 00:04:18,170
 TAF database. After the script
 is run we will have catch.csv,
 
 50
-00:04:18,169 --> 00:04:24,940
+00:04:18,170 --> 00:04:24,940
 summary.csv, survey.csv, all
 found in a new folder called data.
 
 51
-00:04:25,009 --> 00:04:33,030
+00:04:25,010 --> 00:04:33,030
 We start by loading the icesTAF package
 and create an empty directory. We next
 
@@ -269,22 +269,22 @@ surveys and create a combined index,
 as the average of the three surveys.
 
 55
-00:04:49,490 --> 00:04:59,699
+00:04:49,490 --> 00:04:59,700
 This is the catch data, very short
 history of the catches for this
 
 56
-00:04:59,699 --> 00:05:08,539
+00:04:59,700 --> 00:05:08,540
 fishery, and this is the survey data.
 We have selected the years and those
 
 57
-00:05:08,539 --> 00:05:13,979
+00:05:08,540 --> 00:05:13,980
 three surveys, but importantly we have
 also created a combined index, and
 
 58
-00:05:13,979 --> 00:05:21,120
+00:05:13,980 --> 00:05:21,120
 that is the actual input data for the
 assessment. We finalize the tables and
 
@@ -294,12 +294,12 @@ we write them out to the data directory.
 What we have done is to create a data
 
 60
-00:05:27,150 --> 00:05:33,389
+00:05:27,150 --> 00:05:33,390
 folder containing the data that will be
 used in the assessment: catch.csv,
 
 61
-00:05:33,389 --> 00:05:41,460
+00:05:33,390 --> 00:05:41,460
 summary.csv, and survey.csv. In the
 catch.csv we have the catch history,
 
@@ -309,27 +309,27 @@ in the summary we have combined the
 catch history with the index that
 
 63
-00:05:48,330 --> 00:05:55,169
+00:05:48,330 --> 00:05:55,170
 will be used, and the survey documents
 how the index is calculated. The next
 
 64
-00:05:55,169 --> 00:06:01,289
+00:05:55,170 --> 00:06:01,290
 script that is run is input.R. It is a
 short script, where we will convert the
 
 65
-00:06:01,289 --> 00:06:06,389
+00:06:01,290 --> 00:06:06,390
 data to model format and write out the
 model input files. In other words, we will
 
 66
-00:06:06,389 --> 00:06:10,889
+00:06:06,390 --> 00:06:10,890
 start with catch and survey in the data
 folder, but after the script is run we
 
 67
-00:06:10,889 --> 00:06:17,550
+00:06:10,890 --> 00:06:17,550
 will have input.RData in a folder called
 input. So we run those commands, again
 
@@ -426,17 +426,17 @@ Finally, in report.R, we're going to
 prepare plots and tables that could
 
 87
-00:08:20,680 --> 00:08:24,729
+00:08:20,680 --> 00:08:24,730
 be included in the stock assessment
 report. Taking the summary from the data
 
 88
-00:08:24,729 --> 00:08:33,940
+00:08:24,730 --> 00:08:33,940
 step, we're just going to be plotting
 the survey as a PNG file. So we load
 
 89
-00:08:33,940 --> 00:08:39,849
+00:08:33,940 --> 00:08:44,540
 the icesTAF package, create an empty
 directory report, read in the summary,
 
