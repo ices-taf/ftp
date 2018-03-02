@@ -10,12 +10,12 @@ They structure the stock assessment
 
 3
 00:00:10,170 --> 00:00:15,839
-into separate steps and what we'll end up
+into separate steps, and what we'll end up
 with is clean organized and reproducible
 
 4
 00:00:15,839 --> 00:00:20,640
-assessments. So the aim of TAF is to
+assessments. The aim of TAF is to
 implement a framework to organize data,
 
 5
@@ -36,32 +36,32 @@ going from data to analysis and results.
 8
 00:00:36,270 --> 00:00:42,149
 We start with getting data from ICES
-databases and other data sources, and
+databases and other data sources.
 
 9
 00:00:42,149 --> 00:00:47,640
-the first step in the data folder is
+The first step in the data folder is
 to gather the data, and to filter and
 
 10
 00:00:47,640 --> 00:00:51,840
-pre-process the data that will finally
-be used in the assessment. So that is one
+preprocess the data that will finally
+be used in the assessment. That is one
 
 11
 00:00:51,840 --> 00:00:57,600
-of the major aims of TAF is to document
+of the major aims of TAF, to document
 and script this process of preparing the
 
 12
 00:00:57,600 --> 00:01:01,140
 data. Describing where they came from and
-what was done to them before they were
+what was done to them, before they were
 
 13
 00:01:01,140 --> 00:01:05,580
 entered in the assessment model. Moving
-on to the input folder the task there is
+on to the input folder, the task there is
 
 14
 00:01:05,580 --> 00:01:11,400
@@ -70,8 +70,8 @@ general format, crosstab year by age
 
 15
 00:01:11,400 --> 00:01:15,540
-usually, into the model specific format.
-So that will depend on the model: it can
+usually, into the model-specific format.
+That will depend on the model: it can
 
 16
 00:01:15,540 --> 00:01:21,150
@@ -90,18 +90,18 @@ commonly used models or any model can be
 
 19
 00:01:31,799 --> 00:01:38,340
-used within this folder. The final step,
-output, is where we convert the model
+used within this folder. The final
+step, output, is where we convert the
 
 20
 00:01:38,340 --> 00:01:43,530
-specific output into more general text
-files, things like numbers of age or
+model-specific output into more general
+text files, things like numbers at age or
 
 21
 00:01:43,530 --> 00:01:48,530
 fishing mortalities, SSB, recruitment,
-and so on. The final step, then, is to
+and so on. The final step is to
 
 22
 00:01:48,530 --> 00:01:54,420
@@ -116,16 +116,16 @@ those folders, data, input, model, and
 24
 00:01:59,729 --> 00:02:05,670
 output, there is an R script that governs
-what takes place. So let's take a look at
+what takes place. Let's take a look at
 
 25
 00:02:05,670 --> 00:02:11,760
-those scripts in more detail. The first
-one is data.R. Again, that is where we
+those scripts in more detail. The
+first one is data.R. That is where
 
 26
 00:02:11,760 --> 00:02:15,500
-pre-process the data and
+we preprocess the data and
 write out what we call TAF data
 
 27
@@ -136,7 +136,7 @@ text files, comma separated values.
 28
 00:02:20,780 --> 00:02:25,850
 The next step is input.R, where we
-convert those data to the model specific
+convert those data to the model-specific
 
 29
 00:02:25,850 --> 00:02:31,060
@@ -190,12 +190,12 @@ script describing the data that are
 
 39
 00:03:12,530 --> 00:03:17,060
-uploaded into the TAF system. So what
-we're going to be doing for the rest of
+uploaded into the TAF system. What
+we're going to be doing for the rest
 
 40
 00:03:17,060 --> 00:03:23,510
-the video is to go through the actual
+of the video is to go through the actual
 analysis behind the 2015 ICES advice for
 
 41
@@ -215,13 +215,13 @@ from GitHub and work with them on your
 
 44
 00:03:41,510 --> 00:03:47,930
-own computer. So let's just dive into
+own computer. Let's just dive into
 data.R. At the top of the script we
 
 45
 00:03:47,930 --> 00:03:53,000
 have comments reminding us what is the
-purpose of the script: to pre-process
+purpose of the script: to preprocess
 
 46
 00:03:53,000 --> 00:03:59,329
@@ -236,11 +236,11 @@ the script is run, in terms of the files
 48
 00:04:05,420 --> 00:04:12,019
 and where they are. So we start with
-catch.csv and surveys_all.csv on
+catch.csv and surveys_all.csv in the
 
 49
 00:04:12,019 --> 00:04:18,169
-the TAF database, and after the script is
+TAF database, and after the script is
 run we will have catch.csv, summary.csv,
 
 50
@@ -256,7 +256,7 @@ and create an empty directory. We next
 52
 00:04:33,030 --> 00:04:39,120
 download the data, the catch and the
-survey, and we start pre-processing the
+survey, and we start preprocessing the
 
 53
 00:04:39,120 --> 00:04:44,250
@@ -291,7 +291,7 @@ assessment. We finalize the tables and we
 59
 00:05:21,120 --> 00:05:27,150
 write them out to the data directory.
-So what we have done is to create a data
+What we have done is to create a data
 
 60
 00:05:27,150 --> 00:05:33,389
@@ -330,12 +330,12 @@ folder, but after the script is run we
 
 67
 00:06:10,889 --> 00:06:17,550
-will have input.RData in a folder
-called input. So we run those commands,
+will have input.RData in a folder called
+input. So we run those commands, again
 
 68
 00:06:17,550 --> 00:06:24,870
-again loading the icesTAF package, creating
+loading the icesTAF package, creating
 the directory. We simply fetch the catch
 
 69
@@ -364,7 +364,7 @@ package called icesAdvice, containing the
 74
 00:06:50,980 --> 00:06:57,040
 function that we'll be using to run the
-analysis, DLS3.2. So we start by creating
+analysis, DLS3.2. We start by creating
 
 75
 00:06:57,040 --> 00:07:04,000
@@ -466,22 +466,22 @@ report, and the summary rounds the
 
 95
 00:09:11,850 --> 00:09:21,030
-indices, so that they will look better in
-a report, maybe with three decimals or so.
+indices, so that they will look better
+in a report, maybe with three decimals.
 
 96
 00:09:21,030 --> 00:09:27,810
 So you would just copy this into the
-report, essentially. In the R scripts we've
+report, essentially. In the R scripts
 
 97
 00:09:27,810 --> 00:09:32,610
-been using some commands that are
-outside of base R. We've been using
+we've been using some commands that
+are outside of base R. We've been using
 
 98
 00:09:32,610 --> 00:09:40,170
-some ICES packages. So let's take a look
+some ICES packages. Let's take a look
 at, for example, DLS3.2. The help page
 
 99
@@ -502,17 +502,17 @@ package. If we just take a look at
 102
 00:09:57,750 --> 00:10:04,440
 the main help page for the icesTAF
-package, it lists all the functions by
+package, it lists all the functions
 
 103
 00:10:04,440 --> 00:10:09,000
-their groups. So some of them
-we've been using to read and write
+by their groups. Some of them we've
+been using to read and write files,
 
 104
 00:10:09,000 --> 00:10:21,150
-files, we've been using cp and mkdir
-to manipulate files. We used tafpng
+we've been using cp and mkdir to
+manipulate files. We used tafpng
 
 105
 00:10:21,150 --> 00:10:29,450
@@ -557,7 +557,7 @@ sourceTAF is to run a single script
 113
 00:11:13,740 --> 00:11:18,810
 and sourceAll is to run all of them.
-So let's take a look at how we can use
+Let's take a look at how we can use
 
 114
 00:11:18,810 --> 00:11:25,380
@@ -596,7 +596,7 @@ they're uploaded, using sourceAll.
 
 121
 00:12:07,200 --> 00:12:12,660
-So what we have learned in this video is
+What we have learned in this video is
 about the overall TAF workflow. We used
 
 122
