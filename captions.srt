@@ -354,12 +354,12 @@ and the results will be written out as
 72
 00:06:38,770 --> 00:06:46,150
 dls.txt, inside the model folder.
-Now it's not enough just to have the
+Now it's not enough just to have
 
 73
 00:06:46,150 --> 00:06:50,980
-icesTAF package. We also fetch a package
-called ICES advice, containing the
+the icesTAF package. We also fetch a
+package called icesAdvice, containing the
 
 74
 00:06:50,980 --> 00:06:57,040
@@ -368,12 +368,12 @@ analysis, DLS3.2. So we start by creating
 
 75
 00:06:57,040 --> 00:07:04,000
-an empty folder, we get the data from
-the previous step, and we apply the
+an empty folder, we get the data
+from the previous step, we apply the
 
 76
 00:07:04,000 --> 00:07:14,770
-DLS method 3.2. And the results are
+DLS method 3.2, and the results are
 found in the model folder as dls.txt.
 
 77
@@ -587,7 +587,7 @@ blazing fast, it's data.R, input.R,
 119
 00:11:56,700 --> 00:12:01,220
 model.R, output.R, and
-report.R. And that is how
+report.R. That is how
 
 120
 00:12:01,220 --> 00:12:07,200
