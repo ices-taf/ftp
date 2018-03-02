@@ -75,7 +75,7 @@ That will depend on the model: it can
 
 16
 00:01:15,540 --> 00:01:21,150
-be one big text file, or an R list, or a
+be one big text file, an R list, or a
 number of input text files, whatever the
 
 17
@@ -86,7 +86,7 @@ about running the model. The model
 18
 00:01:26,640 --> 00:01:31,799
 will be coming from either a toolbox of
-commonly used models or any model can be
+commonly used models, or any model can be
 
 19
 00:01:31,799 --> 00:01:38,340
@@ -240,13 +240,13 @@ catch.csv and surveys_all.csv in the
 
 49
 00:04:12,019 --> 00:04:18,169
-TAF database, and after the script is
-run we will have catch.csv, summary.csv,
+TAF database. After the script
+is run we will have catch.csv,
 
 50
 00:04:18,169 --> 00:04:24,940
-survey.csv, all found in
-a new folder called data.
+summary.csv, survey.csv, all
+found in a new folder called data.
 
 51
 00:04:25,009 --> 00:04:33,030
@@ -265,12 +265,12 @@ the surveys of interest. We scale the
 
 54
 00:04:44,250 --> 00:04:49,490
-surveys and create a combined index, as
-the average of the three surveys, and
+surveys and create a combined index,
+as the average of the three surveys.
 
 55
 00:04:49,490 --> 00:04:59,699
-this is the catch data. Very short
+This is the catch data, very short
 history of the catches for this
 
 56
@@ -281,16 +281,16 @@ We have selected the years and those
 57
 00:05:08,539 --> 00:05:13,979
 three surveys, but importantly we have
-also created a combined index and that
+also created a combined index, and
 
 58
 00:05:13,979 --> 00:05:21,120
-is the actual input data for the
-assessment. We finalize the tables and we
+that is the actual input data for the
+assessment. We finalize the tables and
 
 59
 00:05:21,120 --> 00:05:27,150
-write them out to the data directory.
+we write them out to the data directory.
 What we have done is to create a data
 
 60
@@ -345,15 +345,15 @@ them together in one file, input.RData.
 
 70
 00:06:31,560 --> 00:06:35,370
-The third script model.R runs the model
+The third script model.R runs the model,
 
 71
 00:06:35,370 --> 00:06:38,770
-and the results will be written out as
+and the results will be written out
 
 72
 00:06:38,770 --> 00:06:46,150
-dls.txt, inside the model folder.
+as dls.txt inside the model folder.
 Now it's not enough just to have
 
 73
@@ -403,7 +403,7 @@ so the advice is 291. The output.R
 82
 00:07:48,720 --> 00:07:54,130
 script is about extracting those results
-of interest and writing out the TAF
+of interest, and writing out the TAF
 
 83
 00:07:54,130 --> 00:07:59,350
@@ -417,13 +417,13 @@ complicated stock assessments this would
 
 85
 00:08:05,560 --> 00:08:13,020
-of course take more steps, but here we
-just copy between model into output.
+of course take more steps, but here
+we just copy between model an output.
 
 86
 00:08:13,020 --> 00:08:20,680
-Finally, in the report.R, we're going
-to prepare plots and tables that could
+Finally, in report.R, we're going to
+prepare plots and tables that could
 
 87
 00:08:20,680 --> 00:08:24,729
@@ -433,212 +433,208 @@ report. Taking the summary from the data
 88
 00:08:24,729 --> 00:08:33,940
 step, we're just going to be plotting
-the survey as a PNG file. So we load the
+the survey as a PNG file. So we load
 
 89
 00:08:33,940 --> 00:08:39,849
-icesTAF package, we create an empty
-directory report, we read in the summary,
+the icesTAF package, create an empty
+directory report, read in the summary,
 
 90
-00:08:39,849 --> 00:08:43,409
-and we
-
-91
 00:08:44,540 --> 00:08:52,520
-create the plot, and we also write out
+and create the plot. We also write out
 the summary table, but this time rounding
 
-92
+91
 00:08:52,520 --> 00:08:59,280
 the catch and the index values, to make it
 look better in a report. Inside the
 
-93
+92
 00:08:59,280 --> 00:09:06,360
 report folder, we now have summary.csv
 and survey.png. The survey looks simple
 
-94
+93
 00:09:06,360 --> 00:09:11,850
-enough, ready to be pasted into the
-report, and the summary rounds the
+enough, ready to be pasted into
+the report. The summary rounds the
 
-95
+94
 00:09:11,850 --> 00:09:21,030
 indices, so that they will look better
 in a report, maybe with three decimals.
 
-96
+95
 00:09:21,030 --> 00:09:27,810
 So you would just copy this into the
 report, essentially. In the R scripts
 
-97
+96
 00:09:27,810 --> 00:09:32,610
 we've been using some commands that
 are outside of base R. We've been using
 
-98
+97
 00:09:32,610 --> 00:09:40,170
 some ICES packages. Let's take a look
 at, for example, DLS3.2. The help page
 
-99
+98
 00:09:40,170 --> 00:09:46,500
 describes it as a function to apply
 ICES method 3.2, and it has some good
 
-100
+99
 00:09:46,500 --> 00:09:51,750
 guidelines and references on how to use
 that function. We've also been using
 
-101
+100
 00:09:51,750 --> 00:09:57,750
 some R functions from the icesTAF
 package. If we just take a look at
 
-102
+101
 00:09:57,750 --> 00:10:04,440
 the main help page for the icesTAF
 package, it lists all the functions
 
-103
+102
 00:10:04,440 --> 00:10:09,000
 by their groups. Some of them we've
 been using to read and write files,
 
-104
+103
 00:10:09,000 --> 00:10:21,150
-we've been using cp and mkdir to
-manipulate files. We used tafpng
+and we've been using cp and mkdir
+to manipulate files. We used tafpng
 
-105
+104
 00:10:21,150 --> 00:10:29,450
 to open a PNG graphics device, to draw
 an image and write it in PNG format.
 
-106
+105
 00:10:29,450 --> 00:10:34,590
 Most of the icesTAF functions are very
 short and simple, but they're simply
 
-107
+106
 00:10:34,590 --> 00:10:40,410
 there to make the scripts look
 more readable. They're convenient
 
-108
+107
 00:10:40,410 --> 00:10:45,600
 shorthand functions, to get to the point
 without some boilerplate code that is
 
-109
+108
 00:10:45,600 --> 00:10:53,520
-needed. For example, in the report.R
-we were using tafpng like that, so it
+needed. For example, in report.R we
+were using tafpng like that, so it
 
-110
+109
 00:10:53,520 --> 00:11:00,390
 uses the suggested image size and
 so forth. We also see in the help page
 
-111
+110
 00:11:00,390 --> 00:11:08,730
 some functions that we will now take a
 look at, to run the scripts. There are
 
-112
+111
 00:11:08,730 --> 00:11:13,740
 convenient functions for that as well:
 sourceTAF is to run a single script
 
-113
+112
 00:11:13,740 --> 00:11:18,810
 and sourceAll is to run all of them.
 Let's take a look at how we can use
 
-114
+113
 00:11:18,810 --> 00:11:25,380
 those, instead of running line by line
 like we were doing. We can start from
 
-115
+114
 00:11:25,380 --> 00:11:35,790
-scratch with nothing in here. We can
-run them one by one: sourceTAF data.R.
+scratch with nothing in here. We can run
+them one by one, sourceTAF("data.R"),
+
+115
+00:11:35,790 --> 00:11:44,640
+very similar to the base R
+function to source. It adds a
 
 116
-00:11:35,790 --> 00:11:44,640
-Very similar to the base R function
-to source. It adds some sort of
-
-117
 00:11:44,640 --> 00:11:49,800
 helpful message, with the time and what
 it's doing. But more importantly, we can
 
-118
+117
 00:11:49,800 --> 00:11:56,700
-run all of them: sourceAll. They run
-blazing fast, it's data.R, input.R,
+can run all of them with sourceAll().
+They run blazing fast: data.R, input.R,
 
-119
+118
 00:11:56,700 --> 00:12:01,220
 model.R, output.R, and
 report.R. That is how
 
-120
+119
 00:12:01,220 --> 00:12:07,200
 assessment will be run on TAF once
 they're uploaded, using sourceAll.
 
-121
+120
 00:12:07,200 --> 00:12:12,660
 What we have learned in this video is
 about the overall TAF workflow. We used
 
-122
+121
 00:12:12,660 --> 00:12:20,070
 as an example the North Sea spotted ray,
 as a fully scripted analysis. We also
 
-123
+122
 00:12:20,070 --> 00:12:27,090
 have on the GitHub TAF page other
 examples that can be studied in the
 
-124
+123
 00:12:27,090 --> 00:12:33,270
 same way. That is Icelandic haddock, North
 Sea cod, and Eastern Channel plaice. They
 
-125
+124
 00:12:33,270 --> 00:12:39,840
-are all age based assessments. The Eastern
-Channel plaice uses the FLR suite of
+are all age-based assessments: the
+Eastern Channel plaice uses the FLR
+
+125
+00:12:39,840 --> 00:12:44,820
+suite of R packages, and the North Sea cod
+is a SAM model. The Icelandic haddock is an
 
 126
-00:12:39,840 --> 00:12:44,820
-R packages, and the North Sea cod is a
-SAM model. The Icelandic haddock is an
-
-127
 00:12:44,820 --> 00:12:51,500
-AD Model Builder age based model, and we'll
+AD Model Builder age-based model, and we'll
 be adding more examples there as we go.
 
-128
+127
 00:12:51,500 --> 00:12:57,300
 In a future video, we will be covering
 the TAF web interface, where assessments
 
-129
+128
 00:12:57,300 --> 00:13:02,850
 can be browsed, run, and modified, and
 how web services can be used to upload,
 
-130
+129
 00:13:02,850 --> 00:13:06,380
 download, and run models.
