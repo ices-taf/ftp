@@ -379,11 +379,11 @@ found in the model folder as dls.txt.
 77
 00:07:14,770 --> 00:07:20,920
 It outlines the computations behind the
-advice. The advice is 291 tons, and it is
+advice. The advice is 291 t, and it is
 
 78
 00:07:20,920 --> 00:07:31,030
-coming from the last advice 243, and
+coming from the last advice 243 t, and
 some series of survey indices. On average
 
 79
@@ -398,7 +398,7 @@ not going to increase the advice by
 
 81
 00:07:42,040 --> 00:07:48,060
-so the advice is 291. The output.R
+so the advice is 291 t. The output.R
 
 82
 00:07:48,720 --> 00:07:54,130
