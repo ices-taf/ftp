@@ -1,14 +1,13 @@
- 1   0:00  TAF workflow
- 2   1:56  R scripts
- 3   3:14  North Sea spotted ray
- 4   3:42  data.R
- 5   5:54  input.R
- 6   6:31  model.R
- 7   7:44  output.R
- 8   8:13  report.R
- 9   9:26  ICES packages
-10  10:57  sourceTAF & sourceAll
-11  12:06  Summary
+  0:00  TAF workflow
+  1:56  R scripts
+  3:14  North Sea spotted ray
+  3:42    -  data.R
+  5:54    -  input.R
+  6:31    -  model.R
+  7:44    -  output.R
+  8:13    -  report.R
+  9:26  ICES packages
+12:06  Summary
 
 --------------------------------------------------------------------------------
 
